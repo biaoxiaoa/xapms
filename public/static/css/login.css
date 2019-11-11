@@ -1,0 +1,84 @@
+body{
+    background: #93defe;
+}
+.login_box .login_main{
+    width: 1000px;
+    height: 440px;
+    margin: auto;
+    position: absolute;
+    top: 50%; /*偏移*/
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -220px; 
+}
+
+.login_box .login_main .login_image{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -220px;  */
+    float: left;
+}
+
+.login_box .login_main .login_right{
+    width: 420px;
+    height: 360px;
+    background: rgb(255, 255, 255);
+    position:absolute;
+    top:50%;
+    margin-top: -160px;
+    margin-left: 570px; 
+}
+.login_box .login_main .login_right .login_logo{
+    width: 120px;
+    height: 120px;
+    border: 5px solid #93defe;
+    border-radius: 100px;
+    background: #fff;
+    position: absolute;
+    top: -60px;
+    right: 145px;
+}
+
+.login_box .login_main .login_right .login_logo img{
+    width: 60px;
+    height: 60px;
+    /* display: inline-block; */
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.login_box .login_main .login_right .login_name{
+    margin-top: 80px;
+}
+.login_box .login_main .login_right .login_name p{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #444;
+    padding: 10px 0 20px
+}
+
+.login_box .login_main .login_right .login_form{
+    width: 90%;
+    margin: auto;
+}
+.login_box .login_main .login_right .login_form .logo_icon{
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    font-size: 20px;
+}
+.login_box .login_main .login_right .login_form .layui-input{
+    padding-left: 28px;
+}
+.login_box .login_main .login_right .login_form .coder{
+    height: 38px;
+    width: 100%;
+}
+.login_box .login_main .login_right .login_form .layui-btn{
+    background: #93defe;
+    color: rgb(0,0,0);
+}

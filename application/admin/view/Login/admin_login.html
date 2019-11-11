@@ -1,0 +1,67 @@
+{extend name="../public/template/template.html"}
+{block name="head"}
+
+{__block__}
+<link rel="stylesheet" href="/static/css/login.css">
+{/block}
+{block name="title"}{$title|default=''}{/block}
+{block name="body"}
+{__block__}
+
+<body>
+    <div class="login_box">
+        <div class="login_main">
+            <div class="login_image">
+                <img src="/static/image/login-img.png" alt="" srcset="">
+            </div>
+            <div class="login_right">
+                <div class="login_logo">
+                    <img src="/static/image/login_logo.png" alt="">
+                </div>
+                <div class="login_name">
+                    <p>XXXXXXXXXXX</p>
+                </div>
+                <div class="login_form">
+                    <div class="layui-form">
+                        <div class="layui-col-sm12 layui-col-md12">
+                            <div class="layui-form-item">
+                                <input type="text" name="username" lay-verify="username" autocomplete="off"
+                                    placeholder="账号" class="layui-input" maxlength="20">
+                                <i class="layui-icon layui-icon-username logo_icon"></i>
+                            </div>
+                        </div>
+                        <div class="layui-col-sm12 layui-col-md12">
+                            <div class="layui-form-item">
+                                <input type="password" name="password" lay-verify="password" autocomplete="off"
+                                    placeholder="密码" class="layui-input" maxlength="20">
+                                <i class="layui-icon layui-icon-password logo_icon"></i>
+                            </div>
+                        </div>
+                        <div class="layui-col-sm12 layui-col-md12">
+                            <div class="layui-row">
+                                <div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+                                    <div class="layui-form-item">
+                                        <input type="text" name="checkcode" id="vercode" lay-verify="vercodes|number"
+                                            autocomplete="off" placeholder="验证码" class="layui-input" maxlength="5">
+                                        <i class="layui-icon layui-icon-vercode logo_icon"></i>
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+                                    <img id="captchaImg" class="coder" src="{:url('/coder')}" alt=""
+                                        onclick="verify_code()">
+                                </div>
+                            </div>
+                        </div>
+                        {:token()}
+                        <div class="layui-col-sm12 layui-col-md12 login_button">
+                            <button class="layui-btn layui-btn-fluid" id="login" lay-submit lay-filter="login"
+                                width="90%">立即登录</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login_js"></script>
+</body>
+{/block}

@@ -32,4 +32,14 @@ return [
     'taglib_begin' => '{',
     // 标签库标签结束标记
     'taglib_end'   => '}',
+    'tpl_replace_string' => 
+    [
+        'jquery_js' => '/static/library/jquery/jquery.min.js',
+        'layui_js'  => '/static/library/layui/layui.js',
+        'layui_css' => '/static/library/layui/css/layui.css',
+        'font_css'  => '/static/library/x-admin/css/font.css',
+        'x-admin_css' => '/static/library/x-admin/css/xadmin.css',
+        'x-admin_js' => '/static/library/x-admin/js/xadmin.js',
+        'login_js' => '/static/js/login.js',
+    ]
 ];
