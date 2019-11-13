@@ -46,7 +46,8 @@ layui.use(['form', 'layer'], function () {
     form.on('submit(login)', function (data) {
         $.ajax({
             type:'post',
-            url:'/index.php/index/index/test',
+            url:'/admin',
+            data: data.field,
             success:function(response){
                 console.log(response);
             },

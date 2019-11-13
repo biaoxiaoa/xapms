@@ -2,6 +2,8 @@
 namespace app\admin\controller;
 use think\Controller;
 use think\captcha\Captcha;//验证码
+use services\JsonServices;
+
 class Login extends Controller
 { 
     public function index()
@@ -13,8 +15,11 @@ class Login extends Controller
     {
         if($this->request->isGet()){
             return $this->fetch("login");
-        }else if($this->request->isAjax()) {
-
+        }else if($this->request->isAjax()){
+            $info = input('post.');
+            return JsonServices::successResponse($info);
+        }else if($this->request->isPost()){
+            return JsonServices::successResponse('post');
         }
     }
 

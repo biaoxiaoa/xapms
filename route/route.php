@@ -15,8 +15,8 @@ Route::get('think', function () {
 
 Route::get('hello/:name', 'index/hello');
 
-/*后台登录界面*/
-Route::get('admin', 'admin/Login/login');
+/*后台登录*/
+Route::rule('admin', 'admin/Login/login');
 /*验证码*/
 Route::get('coder', 'admin/Login/Captcha');
 return [
