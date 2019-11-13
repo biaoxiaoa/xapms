@@ -21,14 +21,13 @@ layui.use(['form', 'layer'], function () {
             if (specialCharacters.test(value)) {
                 return "用户名不能输入特殊字符";
             }
-            return "aaa";
         },
         password:function(value,item){
             if(value.length==0){
                 return "请输入密码";
             }
             if (!length.test(value)) {
-                return "密码必须5到20位";
+                return "密码必须5到15位之间";
             }
         },
         vercodes:function(value,item){
@@ -37,6 +36,10 @@ layui.use(['form', 'layer'], function () {
             }
             if(value.length!=5){
                 return "验证码5个字符";
+            }
+            var number = /^[0-9]*$/;//只能是数字
+            if (!number.test(value)) {
+                return "验证码只包含数字";
             }
         }
     })

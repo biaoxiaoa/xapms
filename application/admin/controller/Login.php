@@ -12,7 +12,7 @@ class Login extends Controller
     public function login()
     {
         if($this->request->isGet()){
-            return $this->fetch("admin_login");
+            return $this->fetch("login");
         }else if($this->request->isAjax()) {
 
         }
@@ -32,7 +32,6 @@ class Login extends Controller
             'useNoise'    =>    false,
             'codeSet' =>'1234567890',
             'useCurve'=>false, 
-
         ];
         $captcha = new Captcha($config);
         return $captcha->entry();
